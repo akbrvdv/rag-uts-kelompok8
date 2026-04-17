@@ -15,10 +15,10 @@ Mahasiswa mengisi, memodifikasi, dan mengembangkan kode ini sesuai topik kelompo
 | Raditya Alfareza Purnama Putra | 244311055 | Mengatur proyek & tim supaya berjalan lancar |
 | Raihan Firdaus Alfaritsi       | 244311055 | Membangun dan mengelola sistem data          |
 
-* **Topik Domain**: (Akademik / Kesehatan / Hukum / Bisnis / Pertanian / Teknologi)
-* **Stack yang Dipilih**: (LangChain / LlamaIndex / From Scratch)
-* **LLM yang Digunakan**: (Groq / Gemini / Ollama / lainnya)
-* **Vector DB yang Digunakan**: (ChromaDB / FAISS / lainnya)
+* **Topik Domain**: Akademik
+* **Stack yang Dipilih**: LangChain
+* **LLM yang Digunakan**: 
+* **Vector DB yang Digunakan**: ChromaDB
 
 ---
 
