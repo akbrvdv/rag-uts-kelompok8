@@ -1,31 +1,30 @@
-```markdown
-# 🤖 RAG Starter Pack — UTS Data Engineering  
+# 🤖 RAG Starter Pack — UTS Data Engineering
+
 *Retrieval-Augmented Generation — Sistem Tanya-Jawab Cerdas Berbasis Dokumen*
 
-Starter pack ini adalah kerangka awal proyek RAG untuk UTS Data Engineering D3/D4.  
+Starter pack ini adalah kerangka awal proyek RAG untuk UTS Data Engineering D3/D4.
 Mahasiswa mengisi, memodifikasi, dan mengembangkan kode ini sesuai topik kelompok masing-masing.
 
 ---
 
 ## 👥 Identitas Kelompok
 
-| Nama | NIM | Tugas Utama |
-|------|-----|-------------|
-| Muhammad Akbar Fadilah | 244311051 | Mengolah & menganalisis data jadi insight |
+| Nama                           | NIM       | Tugas Utama                                  |
+| ------------------------------ | --------- | -------------------------------------------- |
+| Muhammad Akbar Fadilah         | 244311051 | Mengolah & menganalisis data jadi insight    |
 | Raditya Alfareza Purnama Putra | 244311055 | Mengatur proyek & tim supaya berjalan lancar |
-| Raihan Firdaus Alfaritsi | 244311055 | Membangun dan mengelola sistem data |
+| Raihan Firdaus Alfaritsi       | 244311055 | Membangun dan mengelola sistem data          |
 
-- **Topik Domain**: (Akademik / Kesehatan / Hukum / Bisnis / Pertanian / Teknologi)  
-- **Stack yang Dipilih**: (LangChain / LlamaIndex / From Scratch)  
-- **LLM yang Digunakan**: (Groq / Gemini / Ollama / lainnya)  
-- **Vector DB yang Digunakan**: (ChromaDB / FAISS / lainnya)  
+* **Topik Domain**: (Akademik / Kesehatan / Hukum / Bisnis / Pertanian / Teknologi)
+* **Stack yang Dipilih**: (LangChain / LlamaIndex / From Scratch)
+* **LLM yang Digunakan**: (Groq / Gemini / Ollama / lainnya)
+* **Vector DB yang Digunakan**: (ChromaDB / FAISS / lainnya)
 
 ---
 
 ## 📁 Struktur Proyek
 
 ```
-
 rag-uts-[nama-kelompok]/
 ├── data/
 │   └── sample.txt                # Dokumen sumber Anda (PDF, TXT, dll.)
@@ -46,8 +45,7 @@ rag-uts-[nama-kelompok]/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
-
-````
+```
 
 ---
 
@@ -65,7 +63,7 @@ source venv/bin/activate        # Linux/Mac
 venv\Scripts\activate           # Windows
 
 pip install -r requirements.txt
-````
+```
 
 ---
 
@@ -167,14 +165,3 @@ Semua konfigurasi utama ada di `src/config.py` (atau langsung di setiap file)
 * **Mata Kuliah**: Data Engineering
 * **Program Studi**: D4 Teknologi Rekayasa Perangkat Lunak
 * **Deadline**: (isi tanggal)
-
----
-
-```
-
----
-
-Kalau mau next step, aku bisa:
-- isi bagian **Topik + stack paling cocok buat kelompok kalian**
-- atau langsung bikinin **kode RAG siap jalan (LangChain + Chroma + Gemini/Groq)** supaya tinggal demo 💻
-```
