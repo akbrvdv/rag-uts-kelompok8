@@ -1,0 +1,27 @@
+# UI Framework
+streamlit==1.32.2
+
+# Core Data
+numpy>=1.24.0
+pandas>=2.0.0
+
+# RAG — LangChain
+langchain>=0.1.0
+langchain-community>=0.0.20
+langchain-groq>=0.1.0
+langchain-huggingface>=0.0.1
+
+# Document Loaders
+pypdf>=3.17.0          # PyPDFLoader (untuk file PDF)
+
+# Embedding — Model Lokal (HuggingFace, berjalan offline)
+sentence-transformers>=2.6.0
+transformers>=4.38.0
+torch>=2.0.0           # CPU saja, tidak perlu GPU
+
+# Vector Database
+chromadb>=0.4.0
+
+# Utilities
+tqdm>=4.66.0
+python-dotenv>=1.0.0

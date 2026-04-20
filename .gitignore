@@ -1,0 +1,13 @@
+# Environments
+.env
+
+# Chroma vector database
+chroma_db/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook files
+.ipynb_checkpoints/
