@@ -55,7 +55,6 @@ def get_rag_chain():
         ("human", "{input}"),
     ])
 
-    # 5. Build pure LCEL Chain (kompatibel dengan berbagai versi Langchain terbaru)
     rag_chain = (
         {"context": retriever | format_docs, "input": RunnablePassthrough()}
         | prompt

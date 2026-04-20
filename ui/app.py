@@ -31,7 +31,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("<h1 class='header-style'>Chatbot Pedoman Akademik & Kurikulum TRPL 🎓</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='header-style'>Chatbot Pedoman Akademik & Kurikulum TRPL</h1>", unsafe_allow_html=True)
 st.caption("Sistem RAG menggunakan Llama 3.1 8B (Groq) dan dokumen akademik D4 TRPL")
 
 # Initialize chat session
