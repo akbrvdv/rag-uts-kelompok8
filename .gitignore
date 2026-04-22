@@ -2,7 +2,7 @@
 .env
 
 # Chroma vector database
-chroma_db/
+# chroma_db/
 
 # Python cache files
 __pycache__/

@@ -38,10 +38,14 @@ st.caption("Sistem RAG menggunakan Llama 3.1 8B (Groq) dan dokumen akademik D4 T
 if "messages" not in st.session_state:
     st.session_state.messages = []
     
+@st.cache_resource
+def load_rag_chain_singleton():
+    return get_rag_chain()
+
 if "rag_chain" not in st.session_state:
     with st.spinner("Menginisialisasi RAG Chain dan Vector Database..."):
         try:
-            st.session_state.rag_chain = get_rag_chain()
+            st.session_state.rag_chain = load_rag_chain_singleton()
         except Exception as e:
             st.error(f"Gagal memuat sistem: {e}. Pastikan ChromaDB sudah dibuat dan GROQ_API_KEY diset.")
 
