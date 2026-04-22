@@ -1,6 +1,6 @@
 # 🤖 RAG Starter Pack — UTS Data Engineering
 
-*Retrieval-Augmented Generation — Sistem Tanya-Jawab Cerdas Berbasis Dokumen*
+*Retrieval-Augmented Generation — Sistem Informasi Akademik Program Studi TRPL*
 
 Starter pack ini adalah kerangka awal proyek RAG untuk UTS Data Engineering D3/D4.
 Mahasiswa mengisi, memodifikasi, dan mengembangkan kode ini sesuai topik kelompok masing-masing.
@@ -25,23 +25,23 @@ Mahasiswa mengisi, memodifikasi, dan mengembangkan kode ini sesuai topik kelompo
 ## 📁 Struktur Proyek
 
 ```
-rag-uts-[nama-kelompok]/
+rag-uts-kelompok8/
 ├── data/
-│   └── sample.txt                # Dokumen sumber Anda (PDF, TXT, dll.)
+│   └── sample.txt          
 ├── src/
-│   ├── indexing.py              # 🔧 WAJIB DIISI: Pipeline indexing
-│   ├── query.py                 # 🔧 WAJIB DIISI: Pipeline query & retrieval
-│   ├── embeddings.py            # 🔧 WAJIB DIISI: Konfigurasi embedding
-│   └── utils.py                 # Helper functions
+│   ├── indexing.py             
+│   ├── query.py                 
+│   ├── embeddings.py            
+│   └── utils.py                 
 ├── ui/
-│   └── app.py                   # 🔧 WAJIB DIISI: Antarmuka Streamlit
+│   └── app.py                  
 ├── docs/
-│   └── arsitektur.png           # 📌 Diagram arsitektur (buat sendiri)
+│   └── arsitektur.png           
 ├── evaluation/
-│   └── hasil_evaluasi.xlsx      # 📌 Tabel evaluasi 10 pertanyaan
+│   └── hasil_evaluasi.xlsx     
 ├── notebooks/
-│   └── 01_demo_rag.ipynb        # Notebook demo
-├── .env.example                 # Template environment variables
+│   └── 01_demo_rag.ipynb        
+├── .env.example                 
 ├── .gitignore
 ├── requirements.txt
 └── README.md
