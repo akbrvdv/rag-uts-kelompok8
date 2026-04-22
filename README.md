@@ -138,8 +138,8 @@ python src/query.py
 
 | Parameter | Default | Keterangan |
 | :--- | :--- | :--- |
-| CHUNK_SIZE | 500 | Ukuran setiap chunk teks |
-| CHUNK_OVERLAP | 50 | Overlap antar chunk |
+| CHUNK_SIZE | 1500 | Ukuran setiap chunk teks |
+| CHUNK_OVERLAP | 100 | Overlap antar chunk |
 | TOP_K | 3 | Jumlah dokumen relevan |
 | MODEL_NAME | Llama3 | Model LLM |
 
@@ -199,5 +199,3 @@ python src/query.py
 * **Deadline**: 24 April 2026
 
 ---
-
-👍 Menjawab tawaranmu di akhir: Kalau kamu butuh bantuan untuk **mengisi tabel evaluasi dengan contoh metrik yang akademik**, atau mau **bikin diagram arsitekturnya dalam bentuk kode Mermaid/PlantUML** biar tidak cuma teks (lebih pro), kabari saja ya! Aku siap bantu.
