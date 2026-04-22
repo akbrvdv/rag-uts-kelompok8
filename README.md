@@ -1,94 +1,131 @@
-# 🤖 RAG Starter Pack — UTS Data Engineering
+```markdown
+# 🤖 RAG Starter Pack — UTS Data Engineering  
+*Retrieval-Augmented Generation — Sistem Informasi Akademik TRPL*
 
-*Retrieval-Augmented Generation — Sistem Informasi Akademik Program Studi TRPL*
+Proyek ini merupakan implementasi sistem **Retrieval-Augmented Generation (RAG)** berbasis dokumen pedoman akademik Program Studi TRPL. Sistem ini memungkinkan chatbot menjawab pertanyaan berdasarkan dokumen yang telah di-*index*.
 
-Starter pack ini adalah kerangka awal proyek RAG untuk UTS Data Engineering D3/D4.
-Mahasiswa mengisi, memodifikasi, dan mengembangkan kode ini sesuai topik kelompok masing-masing.
+Dibangun menggunakan:
+- LangChain  
+- LLM Llama 3.1 (via Groq API)  
+- Embedding HuggingFace (all-MiniLM-L6-v2)  
+- Vector Database ChromaDB  
+- Streamlit (Web UI)  
 
 ---
 
 ## 👥 Identitas Kelompok
 
-| Nama                           | NIM       | Tugas Utama                                  |
-| ------------------------------ | --------- | -------------------------------------------- |
-| Muhammad Akbar Fadilah         | 244311051 | Mengolah & menganalisis data jadi insight    |
-| Raditya Alfareza Purnama Putra | 244311055 | Mengatur proyek & tim supaya berjalan lancar |
-| Raihan Firdaus Alfaritsi       | 244311055 | Membangun dan mengelola sistem data          |
+| Nama                           | NIM       | Peran                                      |
+| ------------------------------ | --------- | ------------------------------------------ |
+| Muhammad Akbar Fadilah         | 244311051 | Data processing & insight                  |
+| Raditya Alfareza Purnama Putra | 244311055 | Project management                         |
+| Raihan Firdaus Alfaritsi       | 244311055 | System & data engineering                  |
 
-* **Topik Domain**: Akademik
-* **Stack yang Dipilih**: LangChain
-* **LLM yang Digunakan**: 
-* **Vector DB yang Digunakan**: ChromaDB
+- Topik Domain: Akademik  
+- Framework: LangChain  
+- LLM: Llama 3.1 (Groq)  
+- Vector DB: ChromaDB  
 
 ---
 
 ## 📁 Struktur Proyek
 
 ```
+
 rag-uts-kelompok8/
 ├── data/
-│   └── sample.txt          
 ├── src/
-│   ├── indexing.py             
-│   ├── query.py                 
-│   ├── embeddings.py            
-│   └── utils.py                 
+│   ├── indexing.py
+│   ├── query.py
+│   ├── embeddings.py
+│   └── utils.py
 ├── ui/
-│   └── app.py                  
+│   └── app.py
+├── chroma_db/
 ├── docs/
-│   └── arsitektur.png           
 ├── evaluation/
-│   └── hasil_evaluasi.xlsx     
 ├── notebooks/
-│   └── 01_demo_rag.ipynb        
-├── .env.example                 
-├── .gitignore
+├── .env.example
 ├── requirements.txt
 └── README.md
+
+````
+
+---
+
+## ⚡ Cara Menjalankan
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/[username]/rag-uts-kelompok8.git
+cd rag-uts-kelompok8
+````
+
+### 2. Setup Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+Aktivasi:
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+PowerShell:
+
+```bash
+.\venv\Scripts\Activate.ps1
+```
+
+Linux/Mac:
+
+```bash
+source venv/bin/activate
 ```
 
 ---
 
-## ⚡ Cara Memulai (Quickstart)
-
-### 1. Clone & Setup
+### 3. Install Dependencies
 
 ```bash
-git clone https://github.com/[username]/rag-uts-[kelompok].git
-cd rag-uts-[kelompok]
-
-python -m venv venv
-source venv/bin/activate        # Linux/Mac
-# atau:
-venv\Scripts\activate           # Windows
-
 pip install -r requirements.txt
 ```
 
 ---
 
-### 2. Konfigurasi API Key
+### 4. Setup API Key (WAJIB)
+
+Buat file `.env` lalu isi:
 
 ```bash
-cp .env.example .env
+GROQ_API_KEY="gsk_xxxxxxxxx"
 ```
 
-Edit `.env` dan isi API key Anda
-⚠️ **JANGAN commit file .env ke GitHub!**
+⚠️ Jangan commit `.env` ke GitHub
 
 ---
 
-### 3. Siapkan Dokumen
+### 5. Masukkan Dokumen
 
-Masukkan dokumen ke folder `data/`
+Masukkan file pedoman akademik ke folder:
 
-```bash
-cp dokumen-saya.pdf data/
+```
+data/
 ```
 
 ---
 
-### 4. Jalankan Indexing (sekali saja)
+### 6. Indexing (RAG Ingestion)
+
+⚠️ Jika sebelumnya sudah pernah indexing:
+
+* hapus folder `chroma_db/`
+
+Jalankan:
 
 ```bash
 python src/indexing.py
@@ -96,15 +133,21 @@ python src/indexing.py
 
 ---
 
-### 5. Jalankan Sistem RAG
+### 7. Jalankan Aplikasi
 
-#### 🔹 Dengan Streamlit UI
+#### Streamlit (UI)
 
 ```bash
 streamlit run ui/app.py
 ```
 
-#### 🔹 Atau via CLI
+Buka di browser:
+
+```
+http://localhost:8501
+```
+
+#### CLI
 
 ```bash
 python src/query.py
@@ -114,54 +157,70 @@ python src/query.py
 
 ## ⚙️ Konfigurasi
 
-Semua konfigurasi utama ada di `src/config.py` (atau langsung di setiap file)
-
-| Parameter     | Default | Keterangan                          |
-| ------------- | ------- | ----------------------------------- |
-| CHUNK_SIZE    | 500     | Ukuran setiap chunk teks (karakter) |
-| CHUNK_OVERLAP | 50      | Overlap antar chunk                 |
-| TOP_K         | 3       | Jumlah dokumen relevan yang diambil |
-| MODEL_NAME    | (isi)   | Nama model LLM yang digunakan       |
+| Parameter     | Default | Keterangan             |
+| ------------- | ------- | ---------------------- |
+| CHUNK_SIZE    | 500     | Ukuran potongan teks   |
+| CHUNK_OVERLAP | 50      | Overlap antar chunk    |
+| TOP_K         | 3       | Jumlah hasil retrieval |
+| MODEL_NAME    | Llama3  | Model LLM              |
 
 ---
 
-## 📊 Hasil Evaluasi
-
-*(Isi setelah pengujian selesai)*
-
-| No | Pertanyaan | Jawaban Sistem | Jawaban Ideal | Skor (1-5) |
-| -- | ---------- | -------------- | ------------- | ---------- |
-| 1  | ...        | ...            | ...           | ...        |
-| 2  | ...        | ...            | ...           | ...        |
-
-**Rata-rata Skor:** ...
-**Analisis:** ...
-
----
-
-## 🏗️ Arsitektur Sistem
-
-*(Masukkan gambar diagram arsitektur di sini)*
+## 🧠 Cara Kerja Sistem
 
 ```
-[Dokumen] → [Loader] → [Splitter] → [Embedding] → [Vector DB]
-                                                         ↕
-[User Query] → [Query Embed] → [Retriever] → [Prompt] → [LLM] → [Jawaban]
+Dokumen → Chunking → Embedding → ChromaDB
+                                      ↓
+User Query → Embedding → Retriever → LLM → Jawaban
 ```
 
 ---
 
-## 📚 Referensi & Sumber
+## 🚀 Deployment (Streamlit Cloud)
 
-* Framework: (LangChain docs / LlamaIndex docs)
-* LLM: (Groq / Gemini / Ollama)
-* Vector DB: (ChromaDB / FAISS docs)
-* Tutorial yang digunakan: (cantumkan URL)
+1. Push project ke GitHub
+2. Buka [https://share.streamlit.io](https://share.streamlit.io)
+3. Login dengan GitHub
+4. Klik "New App"
+5. Isi:
+
+   * Repository: repo kamu
+   * Branch: main
+   * Main file path:
+
+     ```
+     ui/app.py
+     ```
+6. Tambahkan Secrets:
+
+   ```
+   GROQ_API_KEY="gsk_xxxxx"
+   ```
+7. Klik Deploy
+
+---
+
+## 📊 Evaluasi
+
+| No | Pertanyaan | Jawaban Sistem | Jawaban Ideal | Skor |
+| -- | ---------- | -------------- | ------------- | ---- |
+| 1  | ...        | ...            | ...           | ...  |
+
+---
+
+## 📚 Referensi
+
+* LangChain
+* Groq API
+* HuggingFace
+* ChromaDB
 
 ---
 
 ## 👨‍🏫 Informasi UTS
 
-* **Mata Kuliah**: Data Engineering
-* **Program Studi**: D4 Teknologi Rekayasa Perangkat Lunak
-* **Deadline**: (isi tanggal)
+* Mata Kuliah: Data Engineering
+* Program Studi: D4 Teknologi Rekayasa Perangkat Lunak
+* Tugas: Implementasi Sistem RAG
+
+---
