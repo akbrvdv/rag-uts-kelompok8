@@ -147,11 +147,20 @@ python src/query.py
 
 ## 📊 Hasil Evaluasi
 
-*(Isi setelah pengujian selesai)*
+Berikut adalah hasil pengujian sistem RAG terhadap beberapa pertanyaan seputar akademik:
 
 | No | Pertanyaan | Jawaban Sistem | Jawaban Ideal | Skor |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | ... | ... | ... | ... |
+| 1 | apa saja pedoman TRPL? | Pedoman Akademik Program Studi Teknologi Rekayasa Perangkat Lunak (TRPL) tidak secara eksplisit disebutkan dalam dokumen yang disediakan... | Pedoman TRPL meliputi aturan-aturan serta kebutuhan akademis dalam ruang lingkup PNM... | 4 |
+| 2 | apa itu krs? | KRS adalah singkatan dari "Kartu Rencana Studi"... Dokumen yang digunakan untuk merekam rencana studi mahasiswa dalam satu semester atau lebih. | KRS adalah dokumen yang digunakan untuk merekam rencana studi mahasiswa dalam satu semester atau lebih. | 5 |
+| 3 | berapa SKS mata kuliah Data Engineering di program studi TRPL? | Mata kuliah Data Engineering memiliki bobot 0 SKS Teori dan 2 SKS Praktik. | Mata kuliah Data Engineering pada kurikulum 2025/2026 terdiri dari 2 SKS Praktik. | 5 |
+| 4 | apa kepanjangan dari TRPL? | TRPL adalah singkatan dari Teknologi Rekayasa Perangkat Lunak. | TRPL adalah singkatan dari Teknologi Rekayasa Perangkat Lunak... di Politeknik Negeri Madiun. | 4 |
+| 5 | bagaimana prosedur untuk cuti akademik | Prosedur untuk cuti akademik dapat dilihat pada Pedoman Akademik PNM 2024... Mengambil formulir permohonan cuti, mengisi formulir, dsb. | Prosedur: Mengambil formulir permohonan cuti di Sub Bag Akademik dan Kemahasiswaan, Formulir diisi dengan benar, dan sudah disetujui... | 5 |
+| 6 | Bagaimana prinsip penyelenggaraan Program MBKM PNM? | Menurut Pedoman Akademik PNM 2024, mahasiswa diberikan hak mengikuti program MBKM, memperoleh konversi maksimal 20 SKS. | MBKM adalah program Merdeka Belajar Kampus Merdeka dengan konversi maksimal 20 SKS per semester. | 5 |
+| 7 | Bagaimana penilaian pada Nilai Evaluasi Perkuliahan? | Nilai Evaluasi Perkuliahan dinyatakan dalam bentuk markah mentah rentang 0-100 dari partisipasi, tugas, UTS, dan UAS. | Sistem penilaian menggunakan huruf mutu A, AB, B, BC, C, D, dan E berdasarkan akumulasi tugas, UTS, dan UAS. | 4 |
+| 8 | Apa saja predikat kelulusan di prodi TRPL? | Predikat kelulusan terdiri dari Pujian (IPK >3,50), Sangat Memuaskan (3,01-3,50), Memuaskan (2,76-3,00), dan Lulus (2,00-2,75). | Predikat kelulusan terdiri dari Memuaskan, Sangat Memuaskan, dan Dengan Pujian (Cum Laude) sesuai IPK akhir. | 5 |
+| 9 | Bagaimana penyelenggaraan evaluasi perkuliahan di setiap semesternya? | Meliputi UTS pada minggu ke-8, UAS pada minggu ke-16, unjuk kerja/proyek, tugas, dan kuis. | Evaluasi dilakukan tiap semester melalui tugas, kuis, proyek, UTS, dan UAS. | 4 |
+| 10 | Bagaimana akademis menghitung nilai indeks prestasi semester | Indeks Prestasi Semester (IPS) dihitung dari nilai rata-rata akhir semester gabungan seluruh mata kuliah yang ditempuh. | IPS dihitung berdasarkan total bobot nilai mata kuliah dibagi total SKS yang diambil pada semester tersebut. | 4 |
 
 ---
 
